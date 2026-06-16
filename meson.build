@@ -3,7 +3,7 @@ project('the-powder-toy', 'cpp', version:
 #	                    # A.B.C is the version number shown by meson and by your local builds. note that this version
 #	                    # number is overridden by the tag you push to github, so ghactions builds will show that version
 #	                    # number instead. you can also replace 'the-powder-toy' with your mod's simplified name.
-	'100.0.398', meson_version: '>=0.64.0')
+	'100.0.398', meson_version: '>=1.0.0')
 
 if get_option('prepare')
 	# we're being run by prepare.py in a ghactions workflow only to determine the values of options; exit early
@@ -11,7 +11,7 @@ if get_option('prepare')
 endif
 
 target_options = [
-	'cpp_std=c++20',
+	'cpp_std=c++23',
 	'cpp_rtti=false',
 	'b_ndebug=true', # otherwise we get superfluous asserts in the stdlib, see also Assert.h
 ]
